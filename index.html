@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ramses Costa | Camisas</title>
+
+  <meta name="description" content="Ramses Costa - Camisas e produtos em Ananindeua, Pará.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f7f3eb;
+      color: #211b15;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(33, 27, 21, 0.97);
+      border-bottom: 1px solid #b8955a;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #d7b56d;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #d7b56d;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 150px 25px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(33,27,21,.82), rgba(33,27,21,.88)),
+        radial-gradient(circle at center, #80653d, #211b15);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 80px);
+      color: #d7b56d;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    .hero h2 {
+      font-size: clamp(22px, 4vw, 35px);
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-family: Arial, sans-serif;
+      color: #eee;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #d7b56d;
+      color: #211b15;
+      text-decoration: none;
+      border-radius: 4px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      background: #efd394;
+    }
+
+    section {
+      padding: 90px 25px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .title h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .title span {
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: #b8955a;
+      margin: 15px auto;
+    }
+
+    .about {
+      background: #fff;
+    }
+
+    .about-content {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .products {
+      background: #eee8dc;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    .product {
+      background: #fff;
+      padding: 35px 25px;
+      text-align: center;
+      border: 1px solid #ded2bf;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    }
+
+    .product-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .product h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .product p {
+      font-family: Arial, sans-serif;
+      color: #62584c;
+    }
+
+    .contact {
+      background: #211b15;
+      color: white;
+      text-align: center;
+    }
+
+    .contact .title h2 {
+      color: #d7b56d;
+    }
+
+    .contact-info {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact-item {
+      margin: 20px 0;
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+    }
+
+    .contact-item strong {
+      color: #d7b56d;
+    }
+
+    footer {
+      background: #15110e;
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .social {
+      margin-top: 25px;
+    }
+
+    .social a {
+      display: inline-block;
+      margin: 8px;
+      color: #211b15;
+      background: #d7b56d;
+      padding: 10px 18px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        padding: 15px;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding-top: 130px;
+      }
+
+      section {
+        padding: 70px 20px;
+      }
+
+      .title h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="logo">RAMSES COSTA</div>
+
+      <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <h1>Ramses Costa</h1>
+
+        <h2>Estilo que representa você.</h2>
+
+        <p>
+          Camisas e produtos selecionados com estilo clássico,
+          qualidade e personalidade.
+        </p>
+
+        <a
+          class="button"
+          href="https://wa.me/5591999134366"
+          target="_blank">
+          Falar pelo WhatsApp
+        </a>
+      </div>
+    </section>
+
+
+    <section class="about" id="sobre">
+      <div class="container">
+
+        <div class="title">
+          <h2>Sobre Nós</h2>
+          <span></span>
+        </div>
+
+        <div class="about-content">
+          <p>
+            A <strong>Ramses Costa</strong> trabalha com produtos
+            pensados para quem valoriza estilo, presença e qualidade.
+          </p>
+
+          <br>
+
+          <p>
+            Nossa proposta é oferecer camisas que combinem
+            personalidade e elegância para diferentes ocasiões.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="products" id="produtos">
+      <div class="container">
+
+        <div class="title">
+          <h2>Nossos Produtos</h2>
+          <span></span>
+        </div>
+
+        <div class="product-grid">
+
+          <div class="product">
+            <div class="product-icon">👕</div>
+            <h3>Camisas</h3>
+            <p>
+              Modelos selecionados para diferentes estilos
+              e ocasiões.
+            </p>
+          </div>
+
+          <div class="product">
+            <div class="product-icon">✦</div>
+            <h3>Qualidade</h3>
+            <p>
+              Produtos escolhidos pensando em conforto,
+              estilo e acabamento.
+            </p>
+          </div>
+
+          <div class="product">
+            <div class="product-icon">♛</div>
+            <h3>Estilo Clássico</h3>
+            <p>
+              Uma identidade elegante e atemporal.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="contact" id="contato">
+      <div class="container">
+
+        <div class="title">
+          <h2>Entre em Contato</h2>
+          <span></span>
+        </div>
+
+        <div class="contact-info">
+
+          <div class="contact-item">
+            <strong>WhatsApp</strong><br>
+            (91) 99913-4366
+          </div>
+
+          <div class="contact-item">
+            <strong>Instagram</strong><br>
+            @vt.ramses
+          </div>
+
+          <div class="contact-item">
+            <strong>Localização</strong><br>
+            Ananindeua — Pará
+          </div>
+
+          <div class="social">
+
+            <a
+              href="https://wa.me/5591999134366"
+              target="_blank">
+              WhatsApp
+            </a>
+
+            <a
+              href="https://instagram.com/vt.ramses"
+              target="_blank">
+              Instagram
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+    © 2026 Ramses Costa — Todos os direitos reservados.
+  </footer>
+
+
+  <script>
+    console.log("Site Ramses Costa carregado com sucesso.");
+  </script>
+
+</body>
+  </html>
